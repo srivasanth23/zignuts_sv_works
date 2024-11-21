@@ -1,0 +1,14 @@
+// @mixin and @include concept
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+@mixin commoncode($space) {
+  font-weight: map-get($font-weight, bold);
+  font-size: 2rem;
+  letter-spacing: $space;
+}

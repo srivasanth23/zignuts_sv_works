@@ -1,0 +1,84 @@
+/* Css variable compability is 90% where as Scss variable compbality is 100% over all many browsers */
+/*
+// we added _mixin partial and _var partial which we will imported here
+
+$primary-color: #ff652f; // defining variable
+$text-color: #000;
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+); // defining map data type
+
+// @mixin and @include concept
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+@mixin commoncode($space) {
+  font-weight: map-get($font-weight, bold);
+  font-size: 3rem;
+  letter-spacing: $space;
+}
+
+*/
+body {
+  background-color: #ff652f;
+}
+
+p {
+  color: #000;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /*
+  // para inside .main applies below code
+  p {
+    font-weight: map-get($font-weight, bold);
+  }
+
+  .main_para {
+    font-weight: map-get($font-weight, bold);
+  } */
+}
+.main_para, .outer-p {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: normal;
+}
+.main_para:hover, .outer-p:hover {
+  color: rgb(48, 124, 190);
+}
+.main h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+.main h1:hover {
+  color: rgb(48, 124, 190);
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: row;
+  }
+}
+
+.outer-p {
+  font-weight: 400;
+}
+
+.light-background {
+  background-color: white;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

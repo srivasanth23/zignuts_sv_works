@@ -1,0 +1,109 @@
+@import "mixins";
+@import "var";
+
+/* Css variable compability is 90% where as Scss variable compbality is 100% over all many browsers */
+
+/*
+// we added _mixin partial and _var partial which we will imported here
+
+$primary-color: #ff652f; // defining variable
+$text-color: #000;
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+); // defining map data type
+
+// @mixin and @include concept
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+@mixin commoncode($space) {
+  font-weight: map-get($font-weight, bold);
+  font-size: 3rem;
+  letter-spacing: $space;
+}
+
+*/
+
+
+@mixin theme($light-color: false) {
+  //default parameter passing if there is nothing then I passed false
+  @if $light-color {
+    background-color: lighten($color: #fff, $amount: 70);
+    color: darken($color: #000000, $amount: 100);
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+
+//functions concept
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+body {
+  background-color: $primary-color; // using variables concept
+}
+
+p {
+  color: $text-color;
+}
+
+.main {
+  width: calc(80%-40%);
+  margin: 0 auto;
+  @include flexCenter(column); //@include used for @mixin
+
+  /*
+  // para inside .main applies below code
+  p {
+    font-weight: map-get($font-weight, bold);
+  }
+
+  .main_para {
+    font-weight: map-get($font-weight, bold);
+  } */
+
+  //nesting concept
+  &_para {
+    @include commoncode(
+      normal
+    ); //parameter passing we can as many as parameters
+
+    &:hover {
+      color: rgb(48, 124, 190);
+    }
+  } //this one is shortcut for nested classes
+
+  h1 {
+    @include commoncode(1rem);
+    &:hover {
+      color: rgb(48, 124, 190);
+    }
+  }
+
+  @include mobile {
+    flex-direction: row;
+  }
+}
+
+//para outside .main applies below code
+.outer-p {
+  @extend .main_para; //@extend concepts
+  font-weight: weight(regular);
+}
+
+.light-background {
+  @include theme(true);
+}

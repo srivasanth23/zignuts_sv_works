@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Functions</title>
+    <style>
+        /* Basic container styling */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Base styling for each box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Transformations */
+
+        /* 1. Translate (Move) */
+        .translate {
+            transform: translate(20px, 10px);
+            /* Moves 20px right and 10px down */
+        }
+
+        /* 2. Rotate */
+        .rotate {
+            transform: rotate(45deg);
+            /* Rotates the element 45 degrees */
+        }
+
+        /* 3. Scale */
+        .scale {
+            transform: scale(1.5);
+            /* Increases the element size by 1.5 times */
+        }
+
+        /* 4. Skew */
+        .skew {
+            transform: skew(20deg, 10deg);
+            /* Skews the element along X and Y axes */
+        }
+
+        /* 5. Matrix Transformation */
+        .matrix {
+            transform: matrix(1, 0.5, -0.5, 1, 20, 20);
+            /* Complex transformation using matrix */
+        }
+
+        /* 6. 3D Rotate */
+        .rotate3d {
+            transform: rotate3d(1, 1, 0, 45deg);
+            /* Rotates in 3D space */
+        }
+
+        /* 7. 3D Translate */
+        .translate3d {
+            transform: translate3d(20px, 10px, 30px);
+            /* Moves in 3D space */
+        }
+
+        /* 8. 3D Scale */
+        .scale3d {
+            transform: scale3d(1.5, 1.2, 1);
+            /* Scales in 3D space */
+        }
+
+        /* 9. Perspective with 3D rotation */
+        .perspective {
+            perspective: 200px;
+            transform: rotateX(30deg) rotateY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transform Functions Examples</h1>
+    <div class="container">
+        <div class="box translate">Translate</div>
+        <div class="box rotate">Rotate</div>
+        <div class="box scale">Scale</div>
+        <div class="box skew">Skew</div>
+        <div class="box matrix">Matrix</div>
+        <div class="box rotate3d">Rotate 3D</div>
+        <div class="box translate3d">Translate 3D</div>
+        <div class="box scale3d">Scale 3D</div>
+        <div class="box perspective">Perspective</div>
+    </div>
+
+</body>
+
+</html>
