@@ -1,0 +1,44 @@
+#div1,
+#div3 {
+  margin: auto;
+  text-align: center;
+  border: 3px black dotted;
+  font-size: 25px;
+  background-color: cadetblue;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+#div2 {
+  margin: auto;
+  text-align: center;
+  border: 3px black dotted;
+  font-size: 25px;
+  background-color: yellow;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin-top: 10px;
+}
+
+#div3 {
+  margin-top: 10px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.image-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-inner-container img{
+    margin-bottom: 20px;
+}

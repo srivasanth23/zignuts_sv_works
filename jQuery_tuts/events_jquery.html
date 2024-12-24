@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" type='text/css' href="style.css" />
+</head>
+
+<body>
+    <div class="image-container">
+        <h1> jQuery Events </h1>
+        <div class="image-inner-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3TtePhwsoYjYCJmUE1p6DRqY5JkD8Br2Klg&s"
+                alt="js" id="img" width="300px" height="300px">
+            <button id="btn"> Click </button>
+        </div>
+    </div>
+
+    <script>
+        // Two methods are same
+
+        // $(".btn").click(func2);
+        // function func2() {
+        //     $("#img").css("width", "500px");
+        // }
+
+        // $(document).ready(function () {
+        //     $("#btn").click(function () {
+        //         $("#img").css("width", "500px");
+        //     });
+        // });
+
+        $("#img").hover(func1, func2)
+        function func1() {
+            $("#img").css("width", "250px");
+        }
+
+        function func2() {
+            $("#img").css("width", "500px");
+        }
+
+
+    </script>
+</body>
+
+</html>

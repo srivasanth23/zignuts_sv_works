@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PwSkills - a web page devlopment </title>
+</head>
+
+<body class="bg-slate-950">
+    <!-- navbar starts here-->
+    <nav class="w-full h-14 bg-indigo-900 flex justify-between px-4 md:px-6 items-center">
+        <div class="text-2xl text-slate-300 font-bold">PW Skills</div>
+        <ul class="md:flex font-semibold hidden">
+            <li class="mx-[10px] cursor-pointer text-slate-300">Home</li>
+            <li class="mx-[10px] cursor-pointer text-slate-300">About Us</li>
+            <li class="mx-[10px] cursor-pointer text-slate-300">Contact Us</li>
+        </ul>
+        <div class="hidden md:block px-4 py-2 bg-indigo-700 text-white rounded font-bold cursor-pointer">Login/Signup
+        </div>
+        <!-- mobile navbar -->
+        <div class="md:hidden ">
+            <a href="#" class="text-4xl font-bold text-slate-300">&#8801;</a>
+        </div>
+    </nav>
+    <!-- navbar ends here-->
+
+    <!-- image section startes here -->
+    <header class="w-full h-auto">
+        <img class="w-full hidden md:block"
+            src="https://cdn.pwskills.com/assets/uploads/banners/63a18cca807628f5968f528a/web.jpg" alt="">
+        <img class="w-full  md:hidden"
+            src="https://cdn.pwskills.com/assets/uploads/banners/63a18cca807628f5968f528a/mobile.jpg" alt="">
+    </header>
+    <!-- image section ends here -->
+
+    <!-- Our students section -->
+    <div class="h-auto w-100 flex flex-wrap flex-col intems-center text-center p-10">
+        <div class="h-auto w-full flex flex-wrap flex-col items-center">
+            <p class="text-slate-300 text-3xl md:text-4xl font-bold">"Pure Hardwork, No Shortcuts"</p>
+            <div class="w-56 h-1 border-b-4 border-yellow-400 mt-3 rounded-xl md:w-76"></div>
+        </div>
+        <div class="flex flex-wrap w-full justify-evenly text-slate-300 mt-10">
+            <div class="w-46 flex flex-col items-center m-12">
+                <img class="w-44 h-44"
+                    src="data:image/png;base64,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"
+                    alt="">
+                <p class="text-2xl font-bold mt-2">600+</p>
+                <p class="text-xl font-bold text-gray-500">Different courses</p>
+            </div>
+            <div class="w-46 flex flex-col items-center m-12">
+                <img class="w-44 h-44"
+                    src=" data:image/png;base64,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"
+                    alt="">
+                <p class="text-2xl font-bold mt-2">7,00,000+</p>
+                <p class="text-xl font-bold text-gray-500">Students Enrolled</p>
+            </div>
+            <div class="w-46 flex flex-col items-center m-12">
+                <img class="w-44 h-44"
+                    src="data:image/png;base64,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"
+                    alt="">
+                <p class="text-2xl font-bold mt-2">10,000+</p>
+                <p class="text-xl font-bold text-gray-500">Successful Transactions</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
