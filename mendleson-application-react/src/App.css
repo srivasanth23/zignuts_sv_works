@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Handlee&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.svg2 {
+  height: 156px;
+  width: 170px;
+  top: 0px;
+  left: 1365px;
+  z-index: 0;
+}
+
+.svg3 {
+  height: 735px;
+  width: 1403px;
+  z-index: 0;
+}
+
+.svg4 {
+  height: 500px;
+  top: 235px;
+  z-index: 0;
+}
+
+.svg5 {
+  /* height: 200px; */
+  left: 1328px;
+  top: 485px;
+  z-index: 0;
+}
+
+.svg6{
+  top: 1368px;
+  width: 366px;
+  height: 431px;
+}
+
+.svg7{
+  width: 250px;
+  height: 430px;
+  top: 1850px;
+  left: 1380px;
+}
+
+.svg8{
+  width: 259px;
+  height: 470px;
+  top: 2350px;
+  left: -52px;
+}
+
+.svg9{
+  width: 200px;
+  height: 330px;
+  top: 2800px;
+  left: 1380px;
+}
+
+.svg10{
+  top: 3300px;
+}
+
+.svg11{
+  width: 200px;
+  height: 330px;
+  top: 3800px;
+  left: 1380px;
+}
+
+.svg12{
+  width: 179px;
+  height: 404px;
+  top: 4880px;
+}
+
+/* home-page css */
+
+.home_image{
+  /* position: absolute; */
+  top: 450px;
+  width: 750px;
+  height: 440px;
+}
+
+
+
+/* Global css */
+.padding {
+  padding: 0px 120px;
+}
+
+h1, p {
+  font-family: 'Rubik';
+}
