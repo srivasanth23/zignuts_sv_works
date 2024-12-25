@@ -1,35 +1,54 @@
+import { useMediaQuery } from "react-responsive";
+
 const AboutUs = () => {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
-    <section className="flex flex-row items-center justify-between padding h-4/5 my-16">
-       
+    <section className="flex flex-col-reverse padding w-screen md:my-20 md:flex-row items-center justify-between">
       {/* left section - for image*/}
-      <div className="w-2/5">
+      <div className="w-full mt-4 md:w-2/5">
         <img
           src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735048722/b30239617bd01a7ded0e9a15e3b03a5a_iatvwh.png"
           alt="about_us_image"
-          style={{ height: "408px", width: "612px" }}
+          className="h-auto w-full"
         />
       </div>
 
       {/* right section - for content*/}
-      <div className="flex flex-col justify-start w-2/4 ml-28">
-
+      <div className="flex flex-col justify-start w-full md:w-2/4 md:ml-10">
         {/* right sec - upper container */}
         <div>
           <div className="mb-5">
-            <h1 className="heading text-5xl font-medium"> ABOUT US </h1>
-            <svg
-              width="238"
-              height="7"
-              viewBox="0 0 238 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line y1="3.5" x2="238" y2="3.5" stroke="#A9A9A9" />
-              <rect width="156" height="7" rx="3.5" fill="#A9A9A9" />
-            </svg>
+            <h1 className="heading text-2xl md:text-5xl font-medium">
+              {" "}
+              ABOUT US{" "}
+            </h1>
+            {/* according to screen size - the underline of heading changes */}
+            {isSmallScreen ? (
+              <svg
+                width="120"
+                height="7"
+                viewBox="0 0 120 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line y1="3.5" x2="120" y2="3.5" stroke="#A9A9A9" />
+                <rect width="55" height="7" rx="3.5" fill="#A9A9A9" />
+              </svg>
+            ) : (
+              <svg
+                width="238"
+                height="7"
+                viewBox="0 0 238 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line y1="3.5" x2="238" y2="3.5" stroke="#A9A9A9" />
+                <rect width="62" height="7" rx="3.5" fill="#A9A9A9" />
+              </svg>
+            )}
           </div>
-          <p className="text-lg">
+          <p className="text-xs md:text-lg">
             We love what we do and are driven by achieving great results for our
             clients. Our awards and impressive client list are testament to our
             high quality approach. We deliver value, creaKvity, results and
@@ -40,18 +59,17 @@ const AboutUs = () => {
         </div>
 
         {/* right sec - lower container */}
-        <div className="flex flex-row justify-between my-9">
-
+        <div className="flex flex-col md:flex-row justify-between my-9">
           {/* lower container - left part */}
-          <div className="w-2/4">
+          <div className="w-full md:w-2/4">
             <svg
-              width="40"
-              height="41"
-              viewBox="0 0 40 41"
+              width="30"
+              height="31"
+              viewBox="0 0 30 31"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="40" height="41" fill="url(#pattern0)" />
+              <rect width="30" height="31" fill="url(#pattern0)" />
               <defs>
                 <pattern
                   id="pattern0"
@@ -69,8 +87,10 @@ const AboutUs = () => {
                 />
               </defs>
             </svg>
-            <h1 className="text-2xl font-medium my-4">ENGAGEMENT</h1>
-            <p className="text-lg">
+            <h1 className="text-lg md:text-2xl font-medium my-2 md:my-3">
+              ENGAGEMENT
+            </h1>
+            <p className="text-sm md:text-lg">
               We are engagement specialists, who have led projects at all levels
               of the IAP2 spectrum.
               <br />
@@ -79,16 +99,16 @@ const AboutUs = () => {
           </div>
 
           {/* lower container - right part */}
-          <div className="w-2/4 ml-5">
+          <div className="w-full mt-6 md:w-2/4 md:ml-5 md:mt-0">
             <svg
-              width="43"
-              height="41"
-              viewBox="0 0 43 41"
+              width="33"
+              height="31"
+              viewBox="0 0 33 31"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <rect width="43" height="41" fill="url(#pattern0_2_45)" />
+              <rect width="33" height="31" fill="url(#pattern0_2_45)" />
               <defs>
                 <pattern
                   id="pattern0_2_45"
@@ -109,8 +129,10 @@ const AboutUs = () => {
                 />
               </defs>
             </svg>
-            <h1 className="text-2xl font-medium my-4">COMMUNICATIONS</h1>
-            <p className="text-lg">
+            <h1 className="text-lg md:text-2xl font-medium my-2 md:my-3">
+              COMMUNICATIONS
+            </h1>
+            <p className="text-sm md:text-lg">
               We are award-winning leaders in communications and campaign
               management.
               <br />

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Handlee&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Farsan&family=Handlee&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .svg2 {
   height: 156px;
@@ -27,45 +27,45 @@
   z-index: 0;
 }
 
-.svg6{
+.svg6 {
   top: 1368px;
   width: 366px;
   height: 431px;
 }
 
-.svg7{
+.svg7 {
   width: 250px;
   height: 430px;
   top: 1850px;
   left: 1380px;
 }
 
-.svg8{
+.svg8 {
   width: 259px;
   height: 470px;
   top: 2350px;
   left: -52px;
 }
 
-.svg9{
+.svg9 {
   width: 200px;
   height: 330px;
   top: 2800px;
   left: 1380px;
 }
 
-.svg10{
+.svg10 {
   top: 3300px;
 }
 
-.svg11{
+.svg11 {
   width: 200px;
   height: 330px;
   top: 3800px;
   left: 1380px;
 }
 
-.svg12{
+.svg12 {
   width: 179px;
   height: 404px;
   top: 4880px;
@@ -73,20 +73,30 @@
 
 /* home-page css */
 
-.home_image{
+.home_image {
   /* position: absolute; */
-  top: 450px;
   width: 750px;
   height: 440px;
 }
-
-
 
 /* Global css */
 .padding {
   padding: 0px 120px;
 }
 
-h1, p {
-  font-family: 'Rubik';
+h1,
+p {
+  font-family: "Rubik";
+}
+
+@media screen and (max-width: 768px) {
+  .padding {
+    padding: 0px 20px;
+  }
+
+  .home_image {
+    top: 450px;
+    width: 750px;
+    height: 200px;
+  }
 }

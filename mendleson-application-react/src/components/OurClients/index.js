@@ -1,4 +1,7 @@
+import { useMediaQuery } from "react-responsive";
+
 function OurClients() {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
   const clients = [
     "https://res.cloudinary.com/dlxjzmiig/image/upload/v1735108281/1f0908afb05ef7537d353d3ee0fcaf07_fjorzh.png",
@@ -16,27 +19,43 @@ function OurClients() {
     <section className="flex flex-col justify-center items-center padding mt-28">
       {/* Our Clients - heading container */}
       <div className="mb-20">
-        <h1 className="heading text-5xl font-medium"> OUR CLIENTS </h1>
-        <svg
-          width="310"
-          height="7"
-          viewBox="0 0 310 7"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line y1="3.5" x2="310" y2="3.5" stroke="#A9A9A9" />
-          <rect width="104" height="7" rx="3.5" fill="#A9A9A9" />
-        </svg>
+        <h1 className="heading text-2xl md:text-5xl font-medium">
+          OUR CLIENTS
+        </h1>
+        {/* according to screen size - the underline of heading changes */}
+        {isSmallScreen ? (
+          <svg
+            width="150"
+            height="7"
+            viewBox="0 0 150 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="3.5" x2="150" y2="3.5" stroke="#A9A9A9" />
+            <rect width="65" height="7" rx="3.5" fill="#A9A9A9" />
+          </svg>
+        ) : (
+          <svg
+            width="310"
+            height="7"
+            viewBox="0 0 310 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="3.5" x2="310" y2="3.5" stroke="#A9A9A9" />
+            <rect width="104" height="7" rx="3.5" fill="#A9A9A9" />
+          </svg>
+        )}
       </div>
 
       {/* Our Clients - content container */}
-      <div className="flex flex-wrap justify-center flex-row gap-11 w-4/5">
+      <div className="flex flex-wrap justify-center flex-row gap-5 md:gap-11 md:w-4/5">
         {clients.map((each, i) => (
           <img
             src={each}
             alt={`Client ${i + 1}`}
             key={i}
-            className="h-20 w-auto mb-10"
+            className="h-10 md:h-20 w-auto mb-10"
           />
         ))}
       </div>

@@ -1,6 +1,9 @@
 import ServiceItem from "../ServiceItem/index";
+import { useMediaQuery } from "react-responsive";
 
 function Services() {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
+
   // array of services
   const services = [
     {
@@ -55,21 +58,35 @@ function Services() {
     <section className="flex flex-col justify-center items-center padding my-16">
       {/* services heading container */}
       <div>
-        <h1 className="heading text-5xl font-medium"> SERVICES </h1>
-        <svg
-          width="238"
-          height="7"
-          viewBox="0 0 238 7"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line y1="3.5" x2="238" y2="3.5" stroke="#A9A9A9" />
-          <rect width="62" height="7" rx="3.5" fill="#A9A9A9" />
-        </svg>
+        <h1 className="heading text-2xl md:text-5xl font-medium"> SERVICES </h1>
+        {/* according to screen size - the underline of heading changes */}
+        {isSmallScreen ? (
+          <svg
+            width="120"
+            height="7"
+            viewBox="0 0 120 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="3.5" x2="120" y2="3.5" stroke="#A9A9A9" />
+            <rect width="55" height="7" rx="3.5" fill="#A9A9A9" />
+          </svg>
+        ) : (
+          <svg
+            width="238"
+            height="7"
+            viewBox="0 0 238 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="3.5" x2="238" y2="3.5" stroke="#A9A9A9" />
+            <rect width="62" height="7" rx="3.5" fill="#A9A9A9" />
+          </svg>
+        )}
       </div>
 
       {/* services container - bottom container */}
-      <div className="w-4/5">
+      <div className="w-full md:w-4/5">
         {/* services array is mapped to ServiceItem */}
         {services.map((service, index) => (
           <ServiceItem key={index} {...service} />

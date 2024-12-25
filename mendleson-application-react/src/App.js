@@ -19,22 +19,22 @@ function App() {
       />
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735023199/3612727c690c3e92d25e650c52e61503_bqzwfk.png"
-        className="svg2 absolute"
+        className="svg2 absolute hidden lg:block"
         alt="svg2"
       />
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735024159/75e64a221b48e8ffef72a284283c2f3d_fwebyr.png"
-        className="svg3 absolute"
+        className="svg3 absolute hidden lg:block"
         alt="svg3"
       />
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735024134/edc2038e598e7ce7c66c5c36eca1f262_kxkj3j.png"
-        className="svg4 absolute"
+        className="svg4 absolute hidden lg:block"
         alt="svg4"
       />
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735041907/b48ac982423e06965cd1b46980aaed41_kianl8.png"
-        className="svg5 absolute"
+        className="svg5 absolute hidden lg:block"
         alt="svg5"
       />
 
@@ -50,7 +50,7 @@ function App() {
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735059930/bd059a034b771c9b224f19cc1c2c547a_tit789.png"
         alt="svg6"
-        className="svg6 absolute"
+        className="svg6 absolute hidden lg:block"
       />
 
       {/* Services */}
@@ -59,25 +59,25 @@ function App() {
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735099080/39d0cbbc8a2f60c9ba9bfd9b4a42ca59_ua3mb9.png"
         alt="svg7"
-        className="svg7 absolute"
+        className="svg7 absolute hidden lg:block"
       />
 
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735103688/2c20ed302ebbdc8d3582c13cf4510f1f_fqb35b.png"
         alt="svg8"
-        className="svg8 absolute"
+        className="svg8 absolute hidden lg:block"
       />
 
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735099120/2c2eb2e1894d76c70fccd51e686b80fc_dbpyf7.png"
         alt="svg9"
-        className="svg9 absolute"
+        className="svg9 absolute hidden lg:block"
       />
 
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735099124/bd059a034b771c9b224f19cc1c2c547a_iemtpc.png"
         alt="svg10"
-        className="svg10 absolute"
+        className="svg10 absolute hidden lg:block"
       />
 
       {/* Our Team */}
@@ -86,7 +86,7 @@ function App() {
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735099120/2c2eb2e1894d76c70fccd51e686b80fc_dbpyf7.png"
         alt="svg11"
-        className="svg11 absolute"
+        className="svg11 absolute hidden lg:block"
       />
 
       {/* Our Projects */}
@@ -95,7 +95,7 @@ function App() {
       <img
         src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1735107082/5d7591773d14d361fc6fdf74f482ec81_zmolfo.png"
         alt="svg12"
-        className="svg12 absolute"
+        className="svg12 absolute hidden lg:block"
       />
 
       {/* Our Clients */}
@@ -103,7 +103,6 @@ function App() {
 
       {/* Contact Us */}
       <ContactUs />
-      
     </div>
   );
 }
