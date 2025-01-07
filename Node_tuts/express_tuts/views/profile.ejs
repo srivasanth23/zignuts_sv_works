@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+        <h1> Welcome <%= person %>
+        </h1>
+        <p>Age: <strong>
+                <%= data.age %>
+            </strong></p>
+        <p>Job: <strong>
+                <%= data.job %>
+            </strong></p>
+        <h2>hobbies</h2>
+        <ul>
+            <% data.hobbies.forEach(function(item){ %>
+                <li>
+                    <%= item %>
+                </li>
+                <% }) %>
+        </ul>
+</body>
+
+</html>
