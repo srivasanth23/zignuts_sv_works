@@ -1,0 +1,28 @@
+<h1>Edit Blog</h1>
+<form action="/admin/blogs/modify/<%= blogs._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <!-- Blog Title -->
+    <div class="mb-3">
+        <label for="title" class="form-label">Blog Title</label>
+        <input type="text" class="form-control" name="title" id="title" value="<%= blogs.title %>" required>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" id="content" name="body" rows="5" required><%= blogs.description %></textarea>
+    </div>
+
+    <!-- Categories -->
+    <div class="mb-3">
+        <label for="category" class="form-label">Categories</label>
+        <select class="form-select" id="category" name="category" required>
+            <option value="" disabled>Choose a category</option>
+            <option value="React.js" <%=blogs.category==="React.js" ? "selected" : "" %>>React.js</option>
+            <option value="Fun" <%=blogs.category==="Fun" ? "selected" : "" %>>Fun</option>
+            <option value="Python" <%=blogs.category==="Python" ? "selected" : "" %>>Python</option>
+        </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

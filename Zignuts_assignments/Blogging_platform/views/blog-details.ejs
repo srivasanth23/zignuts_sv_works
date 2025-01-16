@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head"); %>
+    <title><%= blog.title %> - Blog Details</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include("./partials/navbar.ejs"); %>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="mb-3"><%= blog.title %></h1>
+                <p class="text-muted">Category: <strong><%= blog.category %></strong></p>
+                <p class="text-muted">Published on: <%= new Date(blog.createdAt).toLocaleDateString() %></p>
+                <p class="text-muted">By: <%= blog.createdBy.fullName || "Unknown" %></p>
+                
+                <!-- Blog Cover Image -->
+                <% if (blog.thumbnailImage) { %>
+                    <img src="<%= blog.thumbnailImage %>" class="img-fluid mb-3" width="" alt="<%= blog.title %>">
+                <% } %>
+                
+                <!-- Blog Content -->
+                <pre><%= blog.description %></pre>
+
+                <!-- Back to Blog List -->
+                <a href="/" class="btn btn-secondary mt-3">Back to Blogs</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("./partials/footer"); %>
+
+    <!-- Scripts -->
+    <%- include("./partials/scripts"); %>
+</body>
+</html>

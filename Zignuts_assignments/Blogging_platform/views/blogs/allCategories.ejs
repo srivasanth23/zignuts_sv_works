@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% categories.forEach((categories)=> { %>
+            <tr>
+                <td>
+                    <%= categories.categoryName %>
+                </td>
+                <td>
+                    <form action="/admin/categories/delete/<%= categories._id %>" method="POST"
+                        style="display: inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% }) %>
+    </tbody>
+</table>

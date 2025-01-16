@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+        <title>
+            <%= pageTitle || "Admin Dashboard" %>
+        </title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('./partials/navbar.ejs') %>
+
+        <!-- Sidebar -->
+        <%- include('./partials/sidebar.ejs') %>
+
+            <!-- Main Content -->
+            <div class="container w-50" style="margin-left: 280px; margin-top: 100px;">
+                <!-- Dynamically Rendered Content -->
+                <div class="container mt-4">
+                    <%- include(viewPath) %>
+                </div>
+            </div>
+
+
+            <%- include('./partials/scripts.ejs') %>
+
+                <script>
+                    // Highlight active sidebar link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        if (link.href === window.location.href) {
+                            link.classList.add('active');
+                        }
+                    });
+                    document.getElementById('toggleSidebarBtn').addEventListener('click', function () {
+                        const sidebar = document.getElementById('sidebar');
+                        sidebar.classList.toggle('d-none'); // This will toggle the sidebar's visibility
+                    });
+                </script>
+</body>
+
+</html>

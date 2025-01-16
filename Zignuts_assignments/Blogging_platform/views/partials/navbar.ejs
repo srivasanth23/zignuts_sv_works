@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary fixed-top" data-bs-theme="dark">
+    <div class="container-fluid">
+        <!-- Logo (Left) -->
+        <a class="navbar-brand" href="/">Blog-o-pedia</a>
+
+        <!-- Toggler for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Centered Search Bar and Right-Aligned Menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex justify-content-between w-100">
+                <!-- Centered Search Bar -->
+                <!-- <form class="d-flex mx-auto" role="search" style="max-width: 500px; width: 100%;" method="GET"
+                    action="/blogs/search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query"
+                        id="searchInput" required>
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form> -->
+
+                <!-- Right-Aligned Menu Items -->
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#">Latest Blogs</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="">All Categories</a>
+                    </li> -->
+
+                    <% if (user) { %>
+                        <!-- Dropdown for both User and Admin -->
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false">
+                                <%= user.fullName %>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-end" style="left: unset; right: 0;">
+                                <li><a class="dropdown-item" href="/user/signout"> Sign Out</a></li>
+
+                                <% if (user.role==="admin" ) { %>
+                                    <!-- Admin Only "My Profile" Button inside Dropdown -->
+                                    <li>
+                                        <button class="dropdown-item" id="toggleSidebarBtn" type="button">
+                                            My Profile
+                                        </button>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                        </li>
+                        <% } else { %>
+                            <!-- For users who are not logged in -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/signup">
+                                    Sign Up
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/signin">
+                                    Sign In
+                                </a>
+                            </li>
+                            <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

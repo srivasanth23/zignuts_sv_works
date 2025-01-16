@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Actions</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% blogs.forEach((blog)=> { %>
+            <tr>
+                <td>
+                    <%= blog.title %>
+                </td>
+                <td>
+                    <a href="/blogs/<%= blog._id %>" class="btn btn-primary btn-sm">View</a>
+                    <form action="/admin/blogs/delete/<%= blog._id %>" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/admin/blogs/modify/<%= blog._id %>" method="PUT"><button type="submit"
+                            class="btn btn-warning btn-sm">Modify</button">
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>

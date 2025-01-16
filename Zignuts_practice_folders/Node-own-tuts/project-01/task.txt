@@ -1,0 +1,19 @@
+Creating REST API - JSON --- DONE
+
+GET /users = HTML document Render  --- DONE
+GET /api/users =  List all users JSON   --- DONE
+GET /api/users/:id = Get the user with ID  --- DONE
+
+POST /api/users = Creates new user  --- DONE
+
+PUT /api/users/:id = Edits the user with ID  --- DONE
+
+DELETE /api/users/:id = Deletes the ID --- DONE
+
+Added Middleware ---DONE
+
+
+
+?????? MONGODB ???????
+Schema - used for defining struture (basically stored in Models)
+    - We does CRUD operation using Models

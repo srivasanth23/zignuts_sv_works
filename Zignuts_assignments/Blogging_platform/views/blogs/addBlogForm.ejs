@@ -1,0 +1,32 @@
+<h1>Add a New Blog</h1>
+<form action="/admin/blogs/add" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Blog Title</label>
+        <input type="text" class="form-control" name="title" id="title" required>
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" id="content" name="body" rows="5" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="coverImage" class="form-label">Cover Image</label>
+        <input class="form-control" type="file" name="coverImage" required>
+    </div>
+    <div class="mb-3">
+        <label for="category" class="form-label">Categories</label>
+        <select class="form-select" id="category" name="category" required>
+            <% if (categories.length> 0) { %>
+                <option value="" disabled selected>Choose a category</option>
+                <% categories.forEach(category=> { %>
+                    <option value="<%= category.categoryName %>">
+                        <%= category.categoryName %>
+                    </option>
+                    <% }) %>
+                        <% } else { %>
+                            <option value="" disabled selected>No categories available</option>
+                            <% } %>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

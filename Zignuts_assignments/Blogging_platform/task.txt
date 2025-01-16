@@ -1,0 +1,60 @@
+
+-> Databse connection  --DONE
+-> Setting up ejs in project  --DONE
+-> .env setting 
+-> Create BLOG model --DONE
+-> Create USER model 
+-> Craete CATEGORY model 
+
+Admin.js
+-> GET /api/admin/blogs - getting all blogs created by admin 
+-> POST /api/admin/upload -> upload image
+-> POST /api/admin/blogs - adding new blog 
+-> PUT /api/admin/blogs/:id - modify blog
+-> DELETE /api/admin/blogs/:id - deleting blog
+
+
+-> POST /api/admin/categories - create new categories
+-> PUT /api/admin/categories/:id - modify categories
+-> DELETE /api/admin/categories/:id - deleting categories
+
+-> POST /user/login - admin login --DONE
+-> POST /user/logout - admin logout --DONE
+
+
+2. Blog Controller
+Manages blog-related operations like creating, reading, updating, and deleting blogs.
+Example APIs:
+GET /api/blogs - Fetch all blogs.
+GET /api/blogs/:slug - Fetch a specific blog by slug.
+POST /api/admin/blogs - Create a new blog (Admin).
+PUT /api/admin/blogs/:id - Update a blog (Admin).
+DELETE /api/admin/blogs/:id - Delete a blog (Admin).
+
+3. Category Controller
+Manages blog categories for organizing content.
+Example APIs:
+GET /api/categories - Fetch all categories.
+POST /api/admin/categories - Create a new category (Admin).
+PUT /api/admin/categories/:id - Update a category (Admin).
+DELETE /api/admin/categories/:id - Delete a category (Admin).
+
+4. User Controller
+Handles user-specific operations, like fetching saved blogs or managing user preferences.
+Example APIs:
+GET /api/home - Fetch the latest blogs for the homepage.
+GET /api/blogs/search - Search blogs by title or keywords.
+POST /api/user/saved - Save or unsave a blog for a user.
+
+5. Utility Controller
+Handles additional functionalities like image uploads or helper features.
+Example APIs:
+POST /api/admin/upload - Upload blog images (Admin).
+
+
+Configrations : 
+-> JWT configration
+
+Middlewares :
+-> authMiddleware.js 
+-> errorHandler.js
